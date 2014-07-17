@@ -29,18 +29,9 @@
 		DC4399DA1976A6AB0020FD67 /* ProgrammingPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProgrammingPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4399DD1976A6AB0020FD67 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		DC4399DF1976A6AB0020FD67 /* ProgrammingPractice.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ProgrammingPractice.1; sourceTree = "<group>"; };
+		DC52F0DC19784B7D004330F2 /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
 		DC855755197799E700864A4F /* Address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Address.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		DC4399D71976A6AB0020FD67 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DC4399D11976A6AB0020FD67 = {
@@ -65,6 +56,7 @@
 				DC4399DD1976A6AB0020FD67 /* main.c */,
 				DC4399DF1976A6AB0020FD67 /* ProgrammingPractice.1 */,
 				DC855755197799E700864A4F /* Address.c */,
+				DC52F0DC19784B7D004330F2 /* Address.h */,
 			);
 			path = ProgrammingPractice;
 			sourceTree = "<group>";
@@ -77,7 +69,6 @@
 			buildConfigurationList = DC4399E31976A6AB0020FD67 /* Build configuration list for PBXNativeTarget "ProgrammingPractice" */;
 			buildPhases = (
 				DC4399D61976A6AB0020FD67 /* Sources */,
-				DC4399D71976A6AB0020FD67 /* Frameworks */,
 				DC4399D81976A6AB0020FD67 /* CopyFiles */,
 			);
 			buildRules = (

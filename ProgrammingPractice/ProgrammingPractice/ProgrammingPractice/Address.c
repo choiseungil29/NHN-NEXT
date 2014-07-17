@@ -7,43 +7,48 @@
 //
 
 #include <stdio.h>
+#include "Address.h"
 
-typedef enum {false, true} bool;
+bool init(Address*, char*, char*, char*);
+bool _setUserName(Address*, char*);
+bool _setPhoneNum(Address*, char*);
+bool _setHomeAddress(Address*, char*);
+bool _insertNode(Address* address, char*, char*, char*);
 
-typedef struct address {
-    void (*init)(struct address* this);
-    bool (*setUserName)(char* _userName);
-    bool (*setPhoneNum)(char* _phoneNum);
-    bool (*setHomeAddress)(char* _homeAddree);
-
-    struct address* node;
+bool init(Address* address, char* _userName, char* _phoneNum, char* _homeAddress) {
     
-    char* userName;
-    char* phoneNum;
-    char* homeAddress;
-    
-} Address;
-
-void init(Address* address) {
-    address->setUserName = &setUserName;
-    address->setPhoneNum = &setPhoneNum;
-    address->setHomeAddress = &setHomeAddress;
+    address = (Address*)malloc(sizeof(Address*));
+    address->setUserName = _setUserName;
+    address->setPhoneNum = _setPhoneNum;
+    address->setHomeAddress = _setHomeAddress;
+    address->insertNode = _insertNode;
     
     address->node = NULL;
     
-    address->userName = NULL;
-    address->phoneNum = NULL;
-    address->homeAddress = NULL;
+    if(!address->setUserName(address, _userName)) {
+        return false;
+    }
+    if(!address->setPhoneNum(address, _phoneNum)) {
+        return false;
+    }
+    if(!address->setHomeAddress(address, _homeAddress)) {
+        return false;
+    }
+    
+    return true;
 }
 
-bool setUserName(char* _userName) { // 한글인지 아닌지 검사.
+bool _setUserName(Address* address, char* _userName) { // 한글인지 아닌지 검사.
     int i=0;
     for(i=0; i<sizeof(_userName); i++) {
     }
-    return false;
+    
+    address->userName = _userName;
+    
+    return true;
 }
 
-bool setPhoneNum(char* _phoneNum) {
+bool _setPhoneNum(Address* address, char* _phoneNum) {
     if(sizeof(_phoneNum) != 13) { // 배열의 길이 수 검사
         return false;
     }
@@ -59,9 +64,35 @@ bool setPhoneNum(char* _phoneNum) {
         
     }
     
-    return false;
+    address->phoneNum = _phoneNum;
+    
+    return true;
 }
 
-bool setHomeAddress(char* _homeAddress) {
-    return false;
+bool _setHomeAddress(Address* address, char* _homeAddress) { // 집 주소를 저장함.
+    
+    address->homeAddress = _homeAddress;
+    
+    return true;
 }
+
+bool _insertNode(Address* address, char* userName, char* phoneNum, char* homeAddress) { // 노드를 추가해준다.
+    Address* node = address->node;
+    if(!init(node, userName, phoneNum, homeAddress)) {
+        return false;
+    }
+    return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
