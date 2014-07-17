@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC4399DE1976A6AB0020FD67 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DC4399DD1976A6AB0020FD67 /* main.c */; };
 		DC4399E01976A6AB0020FD67 /* ProgrammingPractice.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC4399DF1976A6AB0020FD67 /* ProgrammingPractice.1 */; };
+		DC855756197799E700864A4F /* Address.c in Sources */ = {isa = PBXBuildFile; fileRef = DC855755197799E700864A4F /* Address.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		DC4399DA1976A6AB0020FD67 /* ProgrammingPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProgrammingPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4399DD1976A6AB0020FD67 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		DC4399DF1976A6AB0020FD67 /* ProgrammingPractice.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ProgrammingPractice.1; sourceTree = "<group>"; };
+		DC855755197799E700864A4F /* Address.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Address.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				DC4399DD1976A6AB0020FD67 /* main.c */,
 				DC4399DF1976A6AB0020FD67 /* ProgrammingPractice.1 */,
+				DC855755197799E700864A4F /* Address.c */,
 			);
 			path = ProgrammingPractice;
 			sourceTree = "<group>";
@@ -117,6 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC855756197799E700864A4F /* Address.c in Sources */,
 				DC4399DE1976A6AB0020FD67 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +231,7 @@
 				DC4399E51976A6AB0020FD67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
