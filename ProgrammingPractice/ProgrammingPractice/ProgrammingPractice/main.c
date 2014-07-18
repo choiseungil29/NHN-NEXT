@@ -7,7 +7,9 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "Address.h"
+#include <curses.h>
 
 void (*printScene)(char);
 void mainScene(char);
@@ -24,32 +26,30 @@ int main(int argc, const char * argv[])
     
     printScene = &mainScene;
     
-    char letter;
-    do {
-        printf("0. 초기 화면으로.\n");
+    char letter = '0';
+    while(letter != 'q') {
         printScene(letter);
-        printf("5. 종료\n");
-        
-        
-        if(letter == '0') {
-            printScene = &mainScene;
-        } else if(letter == '5') {
-            exit(0);
-        }
-        
+        letter = getchar();
         printf("\n");
-        
-    } while((letter = getchar()) != '5');
+        //system("clear");
+    }
+    
+    printf("종료되었습니다. \n");
+    
     return 0;
 }
 
 void mainScene(char letter) {
+    printf("0. 초기 화면으로.\n");
     printf("1. 주소록 추가\n");
     printf("2. 주소록 삭제\n");
     printf("3. 주소록 검색\n");
     printf("4. 주소록 조회\n");
+    printf("q. 종료\n");
     
-    if(letter == '1') {
+    if(letter == '0') {
+        sceneChange(&mainScene);
+    } else if(letter == '1') {
         sceneChange(&addScene);
     } else if(letter == '2') {
         sceneChange(&removeScene);
@@ -63,7 +63,12 @@ void mainScene(char letter) {
 }
 
 void addScene(char letter) {
+    printf("0. 초기 화면으로.\n");
+    printf("q. 종료\n");
     
+    if(letter == '0') {
+        sceneChange(&mainScene);
+    }
 }
 
 void removeScene(char letter) {
@@ -80,6 +85,8 @@ void showAllAddressScene(char letter) {
 
 void sceneChange(void (*fParameter)(char)) {
     printScene = fParameter;
+    //system("clear");
+    printf("\n");
 }
 
 
