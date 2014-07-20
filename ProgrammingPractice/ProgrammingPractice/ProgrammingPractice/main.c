@@ -11,42 +11,34 @@
 #include "Address.h"
 #include <curses.h>
 
-void (*printScene)(char);
-void mainScene(char);
-void addScene(char);
-void removeScene(char);
-void searchScene(char);
-void showAllAddressScene(char);
-void sceneChange(void(*fParameter)(char));
+void (*printScene)();
+void mainScene();
+void addScene();
+void removeScene();
+void searchScene();
+void showAllAddressScene();
+void sceneChange(void(*fParameter)());
 
+char letter = '0';
 
 int main(int argc, const char * argv[])
 {
     Address* head = (Address*)malloc(sizeof(Address*)); // 최초 초기화.
     
-    printScene = &mainScene;
-    
-    char letter = '0';
-    while(letter != 'q') {
-        printScene(letter);
-        letter = getchar();
-        printf("\n");
-        //system("clear");
-    }
+    sceneChange(&mainScene);
+    do {
+        printScene();
+        scanf("%c", &letter);
+        system("clear");
+        //printf("clear success : %d\n", letter);
+    } while(letter != 'q');
     
     printf("종료되었습니다. \n");
     
     return 0;
 }
 
-void mainScene(char letter) {
-    printf("0. 초기 화면으로.\n");
-    printf("1. 주소록 추가\n");
-    printf("2. 주소록 삭제\n");
-    printf("3. 주소록 검색\n");
-    printf("4. 주소록 조회\n");
-    printf("q. 종료\n");
-    
+void mainScene() {
     if(letter == '0') {
         sceneChange(&mainScene);
     } else if(letter == '1') {
@@ -57,42 +49,57 @@ void mainScene(char letter) {
         sceneChange(&searchScene);
     } else if(letter == '4') {
         sceneChange(&showAllAddressScene);
-    } else {
-        printf("잘못된 입력입니다. 다시 입력해주세요.\n");
     }
+    
+    printf("0. 초기 화면으로.\n");
+    printf("1. 주소록 추가\n");
+    printf("2. 주소록 삭제\n");
+    printf("3. 주소록 검색\n");
+    printf("4. 주소록 조회\n");
+    printf("q. 종료\n");
 }
 
-void addScene(char letter) {
-    printf("0. 초기 화면으로.\n");
-    printf("q. 종료\n");
-    
+void addScene() {
     if(letter == '0') {
         sceneChange(&mainScene);
     }
-}
-
-void removeScene(char letter) {
     
+    printf("0. 초기 화면으로.\n");
+    printf("q. 종료\n");
 }
 
-void searchScene(char letter) {
+void removeScene() {
+    if(letter == '0') {
+        sceneChange(&mainScene);
+    }
     
+    printf("0. 초기 화면으로.\n");
+    printf("q. 종료\n");
 }
 
-void showAllAddressScene(char letter) {
+void searchScene() {
+    if(letter == '0') {
+        sceneChange(&mainScene);
+    }
     
+    printf("0. 초기 화면으로.\n");
+    printf("q. 종료\n");
 }
 
-void sceneChange(void (*fParameter)(char)) {
+void showAllAddressScene() {
+    if(letter == '0') {
+        sceneChange(&mainScene);
+    }
+    
+    printf("0. 초기 화면으로.\n");
+    printf("q. 종료\n");
+}
+
+void sceneChange(void (*fParameter)()) {
+    system("clear");
     printScene = fParameter;
-    //system("clear");
-    printf("\n");
+    //printf("\n");
 }
-
-
-
-
-
 
 
 
