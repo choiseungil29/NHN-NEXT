@@ -1,0 +1,223 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pro",
+				"properties  (element)"
+			],
+			[
+				"android",
+				"android.sdk.path  (element)"
+			],
+			[
+				"Log",
+				"logging  (directory)"
+			],
+			[
+				"de",
+				"deviceId"
+			],
+			[
+				"regi",
+				"registration_id"
+			],
+			[
+				"regist",
+				"registration_id"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"selected_items":
+		[
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 620.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/CLogic/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/CLogic/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/CLogic/Workspace/JustGame/Assets/Scripts/Main.cs",
+		"/Users/CLogic/Workspace/JustGame/Assets/Scripts/MainScript.cs",
+		"/Users/CLogic/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/CLogic/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/CLogic/Workspace/JustGame/JustGame.sublime-project",
+		"/Users/CLogic/Workspace/FBReaderJ/project.properties",
+		"/Users/CLogic/Workspace/PageTurner/pom.xml",
+		"/Users/CLogic/Workspace/FBReaderJ/bin/AndroidManifest.xml",
+		"/Users/CLogic/Desktop/viewer.html",
+		"/Users/CLogic/Workspace/FBReaderJ/build.xml",
+		"/Users/CLogic/Workspace/FBReaderJ/third-party/drag-sort-listview/pom.xml",
+		"/Users/CLogic/Workspace/FBReaderJ/third-party/drag-sort-listview/library/build.xml",
+		"/Users/CLogic/Workspace/FBReaderJ/third-party/drag-sort-listview/library/AndroidManifest.xml",
+		"/Users/CLogic/Desktop/js/inflate.js",
+		"/Users/CLogic/Workspace/CLogic/Scene/Scene.py",
+		"/Users/CLogic/Workspace/CLogic/SceneManager/SceneManager.py",
+		"/Users/CLogic/Workspace/CLogic/Utils/Log.py",
+		"/Users/CLogic/Workspace/CLogic/Sprite/Sprite.py",
+		"/Users/CLogic/Workspace/CLogic/Scene/TestScene.py",
+		"/Users/CLogic/Workspace/CLogic/Sprite/Texture.py",
+		"/Users/CLogic/Downloads/EPUB/contents.xhtml",
+		"/Users/CLogic/Workspace/monocle/src/monocore.js",
+		"/Users/CLogic/Workspace/CLogic/Window/Window.py",
+		"/android-sdk/tools/ant/build.xml",
+		"/Users/CLogic/Workspace/ActionBarSherlock/library/pom.xml",
+		"/Users/CLogic/Workspace/ActionBarSherlock/pom.xml",
+		"/Users/CLogic/Workspace/HtmlSpanner/build.gradle",
+		"/Users/CLogic/Workspace/ydkm-server/views/index.jade",
+		"/Users/CLogic/Workspace/ydkm-server/views/layout.jade",
+		"/Users/CLogic/Workspace/ydkm-server/routes/run.js",
+		"/Users/CLogic/Workspace/ydkm-server/package.json"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"shift+space",
+			"super",
+			"command",
+			"shift+tab",
+			"shift+space",
+			"ctrl+space",
+			"shift+space",
+			".lib",
+			"google.play.",
+			"ndk.dir",
+			"zip",
+			"version-tag",
+			"sdk",
+			"apt",
+			"android",
+			"maven",
+			"deviceId",
+			"completion"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
