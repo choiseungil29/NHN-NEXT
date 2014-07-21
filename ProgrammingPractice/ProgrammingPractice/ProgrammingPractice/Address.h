@@ -14,20 +14,22 @@ typedef enum {false, true} bool;
 typedef bool (*fp)(char*);
 
 typedef struct address {
-    void (*init)(struct address* this);
     
     bool (*setUserName)(struct address*, char*);
     bool (*setPhoneNum)(struct address*, char*);
     bool (*setHomeAddress)(struct address*, char*);
     
-    bool (*insertNode)(struct address*);
-    
     struct address* node;
     
+    int id;
     char* userName;
     char* phoneNum;
     char* homeAddress;
     
 } Address;
+
+bool _setUserName(Address*, char*);
+bool _setPhoneNum(Address*, char*);
+bool _setHomeAddress(Address*, char*);
 
 #endif

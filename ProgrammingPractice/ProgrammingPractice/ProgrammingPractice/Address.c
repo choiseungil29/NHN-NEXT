@@ -9,33 +9,18 @@
 #include <stdio.h>
 #include "Address.h"
 
-bool init(Address*, char*, char*, char*);
-bool _setUserName(Address*, char*);
-bool _setPhoneNum(Address*, char*);
-bool _setHomeAddress(Address*, char*);
-bool _insertNode(Address* address, char*, char*, char*);
-
-bool init(Address* address, char* _userName, char* _phoneNum, char* _homeAddress) {
+void init(Address** address) {
+    (*address) = (Address*)malloc(sizeof(Address*));
     
-    address = (Address*)malloc(sizeof(Address*));
-    address->setUserName = _setUserName;
-    address->setPhoneNum = _setPhoneNum;
-    address->setHomeAddress = _setHomeAddress;
-    address->insertNode = _insertNode;
+    (*address)->setUserName = &_setUserName;
+    (*address)->setPhoneNum = &_setPhoneNum;
+    (*address)->setHomeAddress = &_setHomeAddress;
     
-    address->node = NULL;
+    (*address)->node = NULL;
     
-    if(!address->setUserName(address, _userName)) {
-        return false;
-    }
-    if(!address->setPhoneNum(address, _phoneNum)) {
-        return false;
-    }
-    if(!address->setHomeAddress(address, _homeAddress)) {
-        return false;
-    }
-    
-    return true;
+    (*address)->userName = NULL;
+    (*address)->phoneNum = NULL;
+    (*address)->homeAddress = NULL;
 }
 
 bool _setUserName(Address* address, char* _userName) { // 한글인지 아닌지 검사.
@@ -75,22 +60,6 @@ bool _setHomeAddress(Address* address, char* _homeAddress) { // 집 주소를 �
     
     return true;
 }
-
-bool _insertNode(Address* address, char* userName, char* phoneNum, char* homeAddress) { // 노드를 추가해준다.
-    Address* node = address->node;
-    if(!init(node, userName, phoneNum, homeAddress)) {
-        return false;
-    }
-    return true;
-}
-
-
-
-
-
-
-
-
 
 
 
