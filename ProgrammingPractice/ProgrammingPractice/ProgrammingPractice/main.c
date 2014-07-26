@@ -20,10 +20,10 @@ void showAllAddressScene();
 void sceneChange(void(*fParameter)());
 
 char letter = '0';
+Address* head = NULL;
 
 int main(int argc, const char * argv[])
 {
-    Address* head = (Address*)malloc(sizeof(Address*)); // 최초 초기화.
     
     sceneChange(&mainScene);
     do {
@@ -51,6 +51,7 @@ void mainScene() {
         sceneChange(&showAllAddressScene);
     }
     
+    printf("초기 화면\n");
     printf("0. 초기 화면으로.\n");
     printf("1. 주소록 추가\n");
     printf("2. 주소록 삭제\n");
@@ -64,8 +65,49 @@ void addScene() {
         sceneChange(&mainScene);
     }
     
-    printf("0. 초기 화면으로.\n");
-    printf("q. 종료\n");
+    Address* address = NULL;
+    if(head == NULL) {
+        init(&head);
+        address = head;
+    } else {
+        address = head;
+        while(address->node!= NULL) {
+            address = address->node;
+        }
+        init(&address->node);
+        address = address->node;
+    }
+    
+    char* name = NULL;
+    char* phoneNum = NULL;
+    char* homeAddress = NULL;
+    
+    do {
+        system("clear");
+        printf("이름을 입력해주세요 : ");
+        scanf("%s", name);
+        printf("asdasd");
+    } while(!address->setUserName(address, name));
+    
+    do {
+        system("clear");
+        printf("이름 : %s\n", address->userName);
+        printf("전화번호를 입력해주세요 : ");
+        scanf("%s", phoneNum);
+    } while(!address->setPhoneNum(address, phoneNum));
+    
+    do {
+        system("clear");
+        printf("이름 : %s\n", address->userName);
+        printf("전화번호 : %s\n", address->phoneNum);
+        printf("주소를 입력해주세요 : ");
+        scanf("%s", homeAddress);
+    } while(!address->setHomeAddress(address, homeAddress));
+    
+    system("clear");
+    printf("이름 : %s\n", address->userName);
+    printf("전화번호 : %s\n", address->phoneNum);
+    printf("주소 : %s\n", address->homeAddress);
 }
 
 void removeScene() {
@@ -73,6 +115,7 @@ void removeScene() {
         sceneChange(&mainScene);
     }
     
+    printf("주소록 삭제\n");
     printf("0. 초기 화면으로.\n");
     printf("q. 종료\n");
 }
@@ -82,6 +125,7 @@ void searchScene() {
         sceneChange(&mainScene);
     }
     
+    printf("주소록 검색\n");
     printf("0. 초기 화면으로.\n");
     printf("q. 종료\n");
 }
@@ -91,6 +135,7 @@ void showAllAddressScene() {
         sceneChange(&mainScene);
     }
     
+    printf("주소록 조회\n");
     printf("0. 초기 화면으로.\n");
     printf("q. 종료\n");
 }
